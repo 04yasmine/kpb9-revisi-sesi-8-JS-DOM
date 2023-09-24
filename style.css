@@ -1,0 +1,132 @@
+body, .navbar-color{
+    background-color: #e4e4e4!important;
+}
+
+.content{
+    background-color: #fff;
+    position: relative;
+    
+}
+.navbar{
+    height: calc(48px + 80px);
+}
+.profile-picture{
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border: 1px solid gray;
+    padding: 5px; 
+}
+.mini-nav{
+    width: 400px;
+}
+
+.brand-black{
+    color: #3B3949;
+}
+
+.brand-orange, .text-orange{
+    color: #FF5F26;
+}
+
+.custom-btn-primary, .custom-btn-primary:active, .custom-btn-primary:hover{
+    background-color: #FF5F26 !important;
+    border: none;
+}
+
+.text-gray{
+    color: #7A7F83;
+}
+.add-item-wrapper{
+    background-color: #F5F5F5;
+}
+.custom-checkbox{
+    width: 28px;
+    height: 28px;
+    border-radius: 14px!important;
+}
+.custom-checkbox:checked{
+    background-color: #FF5F26;
+    border-color: #FF5F26;
+    box-shadow: none;
+}
+.custom-checkbox:focus{
+    box-shadow: none;
+    border-color: #dee2e6;
+}
+.add-task-input{
+    border: unset;
+    background-color: #F5F5F5;
+}
+.add-task-input:focus{
+    outline: none;
+}
+.custom-btn-primary-bordered, .custom-btn-primary-bordered:active, .custom-btn-primary-bordered:hover{
+    background-color: #FFF !important;
+    border-color: #FF5F26;
+    color: #FF5F26;
+}
+.custom-btn-gray-bordered, .custom-btn-gray-bordered:active, .custom-btn-gray-bordered:hover{
+    background-color: #FFF !important;
+    border-color: #CCCED2 !important;
+    color: #7A7F83 !important;
+}
+.custom-radio{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    accent-color: #FF5F26;
+}
+.more-bytanggal{
+    background-color: #FFF;
+    width: 250px;
+    height: 144px;
+    border: 1px solid #CCCED2;
+    border-radius: 8px;
+    position: absolute;
+    right: 25px;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-top: 12px;
+}
+.custom-badge{
+    background-color: #FFEBD3;
+    color: #FF5F26;
+    padding: 8px 12px;
+    border-radius: 14px;
+
+}
+.custom-secondary-text{
+    font-size: 14px;
+}
+.custom-item{
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    padding: 16px ;
+    margin: 10px;
+}
+.custom-subtask{
+    font-size: 15px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+.custom-gray-bordered, .custom-gray-bordered:active, .custom-gray-bordered:hover{
+    background-color: #fff !important;
+    border-color: #CCCED2;
+    color: #FF5F26;
+}
+.text-black{
+    color: #293038;
+}
+.custom-checkbox-wrapper{
+    width: 35px;
+}
+.footer{
+    border-top: 1px solid #CCCED2;
+    color: #7A7F83;
+}
+.wrapper{
+    padding-bottom: 120px;
+}
+
+

@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+    <head>
+        <title>wazwez</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-color bg-body-tertiary">
+        <div class="container">
+            <div class="me-auto">
+                <span class="navbar-brand mb-0 h1">
+                    <span class="brand-black">waz</span>
+                    <span class="brand-orange">wez</span>
+                </span>
+            </div>
+            <div class="row align-items-center mini-nav">
+                <div class="col-2">
+                    <img src="/images/notification.png" alt="notif" />
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-2">
+                            <img  class="profile-picture rounded-circle" src="/images/profile.jpg" alt="profile"/>
+                        </div>
+                        <div class="col-auto">Krozeo Jupiter</div>
+                        <div class="col-2">
+                            <img src="/images/arrow-down.png" alt="arrow-down">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </nav>
+        <div class="container content">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-orange text-uppercase">My Task</div>
+                    <div class="row align-items-center">
+                        <div class="col h1">To Do List</div>
+                        <div class="col-auto">
+                            <button id="tambah-tugas" class="btn btn-primary custom-btn-primary rounded-pill">
+                                <img src="/images/plus.png" alt="plus">
+                                Tambah tugas
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-gray">Buat list tugas harian saya</div>
+                </div>
+            </div>
+            <div id="new-item" style="display: none;" class="row align-items-center add-item-wrapper">
+                <div class="col-1 custom-checkbox-wrapper">
+                    <div class="form-check">
+                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row row-cols-auto">
+                        <div class="col fw-bold">
+                            <input class="add-task-input custom-text-input fw-semibold"  type="text" placeholder="Masukan nama tugas"/>
+                        </div>
+                    </div>
+                    <div class="row row-cols-auto">
+                        <div class="col fw-bold">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/images/menu.png" alt="description">
+                                </div>
+                                <div class="col">
+                                    <input class="add-task-input" type="text" placeholder="Deskripsi tugas (optional)"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-auto">
+                        <div class="col fw-bold">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/images/calender.png" alt="calender">
+                                </div>
+                                <div class="col">
+                                    <input class="add-task-input" type="text" placeholder="Tanggal & Waktu"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col text-gray">Sort By</div>
+                <div class="col text-end">
+                    <button id="by-tanggal"  class="btn btn-primary custom-btn-primary-bordered rounded-pill">
+                        By Tanggal
+                        <img src="/images/arrow-down2.png" alt="arrow-down">
+                    </button>
+                </div>
+            </div>
+            <div id="more-bytanggal" class="row align-items-center more-bytanggal" style="display: none;" >
+                <div class="col">By Tanggal</div>
+                <div class="col-auto">
+                    <input class="custom-radio" type="radio" name="by-tanggal" />
+                </div>
+                <div>
+                <div class="row align-items-center">
+                    <div class="col">By Time</div>
+                    <div class="col-auto">
+                        <input class="custom-radio" type="radio" name="by-tanggal"/>
+                    </div>
+                </div>
+                </div>
+                <div>
+                <div class="row align-items-center">
+                    <div class="col">Terbaru</div>
+                    <div class="col-auto">
+                        <input class="custom-radio" type="radio" name="by-tanggal"/>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-1 custom-checkbox-wrapper">
+                    <div class="form-check">
+                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row row-cols-auto">
+                        <div class="col fw-bold">Product Desain</div>
+                        <div class="col">
+                            <span class="badge custom-badge">Hari Ini</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-gray text-body-secondary custom-secondary-text">Tugas untuk design team</div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <img  id="arrow-down" src="/images/arrow-down.png" alt="arrow-down">
+                </div>
+            </div>
+            <div id="new-subtask" style="display: none;" class="row align-items-center custom-item">
+                <div class="col fw-bold custom-subtask">Subtask</div>
+                <div class="col text-end">
+                    <button class="btn btn-primary custom-gray-bordered rounded-pill">
+                        <img src="/images/plus2.png" alt="plus">
+                        Tambah 
+                    </button>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-1 custom-checkbox-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                    <div class="col text-black">Design review</div>
+                    <div class="col-1">
+                            <img src="/images/vector.png" alt="vektor">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-1 custom-checkbox-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                    <div class="col text-black">Low-Fidelity design</div>
+                    <div class="col-1">
+                            <img src="/images/vector.png" alt="vektor">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-1 custom-checkbox-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                    <div class="col text-black">High-Fidelity design</div>
+                    <div class="col-1">
+                            <img src="/images/vector.png" alt="vektor">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-1 custom-checkbox-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                    <div class="col text-black">Design Guidelines</div>
+                    <div class="col-1">
+                            <img src="/images/vector.png" alt="vektor">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-1 custom-checkbox-wrapper">
+                    <div class="form-check">
+                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row row-cols-auto">
+                        <div class="col fw-bold">Development</div>
+                        <div class="col">
+                            <span class="badge custom-badge">15 Juni 2022</span>
+                        </div>
+                    </div>
+                    <!--<div class="row">
+                        <div class="col-12 text-body-secondary custom-secondary-text">Tugas untuk design team</div>
+                    </div>-->
+                </div>
+                <div class="col-1">
+                    <img src="/images/arrow-down.png" alt="arrow-down">
+                </div>
+            </div>
+            <div class="row align-items-center wrapper">
+                <div class="col-1 custom-checkbox-wrapper">
+                    <div class="form-check">
+                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row row-cols-auto">
+                        <div class="col fw-bold">Launching wazwez website</div>
+                        <div class="col">
+                            <span class="badge custom-badge">20 Juni 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <img src="/images/arrow-down.png" alt="arrow-down">
+                </div>
+            </div>
+            <div class="row">
+                <div id="terselesaikan-tugas" class="col footer footer-bordered">
+                    <img id="arrow-right" src="/images/arrow-right.png" alt="arrow-right">
+                    Terselesaikan (3 tugas)
+                </div>
+            </div>
+            <div id="item-terselesaikan" style="display: none;" class="row align-items-center">
+                <div class="col-1 custom-checkbox-wrapper">
+                    <div class="form-check">
+                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                </div>
+                <div class="col text-black fw-bold text-decoration-line-through">Requirements Detail</div>
+                <div class="col-1">
+                    <img src="/images/arrow-down.png" alt="arrow-down">
+                </div>
+                <div>
+                    <div class="row align-items-center">
+                        <div class="col-1 custom-checkbox-wrapper">
+                            <div class="form-check">
+                                <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                        <div class="col text-black fw-bold text-decoration-line-through">Backlog Teams</div>
+                        <div class="col-1">
+                            <img src="/images/arrow-down.png" alt="arrow-down">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row align-items-center">
+                        <div class="col-1 custom-checkbox-wrapper">
+                            <div class="form-check">
+                                <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                        <div class="col text-black fw-bold text-decoration-line-through">Meeting With Teams</div>
+                        <div class="col-1">
+                            <img src="/images/arrow-down.png" alt="arrow-down">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            
+            
+
+        
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script>
+            const newItem = document.getElementById("new-item")
+            document.getElementById("tambah-tugas").addEventListener("click",function(){
+                if(newItem.style.display === "none"){
+                    newItem.style.display = "flex"
+                }else{
+                    newItem.style.display = "none"
+                }
+            })
+            const arrowDown = document.getElementById("arrow-down")
+            const newSubtask = document.getElementById("new-subtask")
+            document.getElementById("arrow-down").addEventListener("click", function(){
+                if(newSubtask.style.display === "none"){
+                    arrowDown.src="/images/arrow-up.png"
+                    newSubtask.style.display="flex"
+                }else{
+                    arrowDown.src="/images/arrow-down.png"
+                    newSubtask.style.display="none"
+                }
+            })
+            const arrowRight = document.getElementById("arrow-right")
+            const itemTerselesaikan = document.getElementById("item-terselesaikan")
+            document.getElementById("terselesaikan-tugas").addEventListener("click", function(){
+                if(itemTerselesaikan.style.display==="none"){
+                    arrowRight.src="/images/arrow-up.png";
+                    itemTerselesaikan.style.display="flex";
+                }else{
+                    arrowRight.src="/images/arrow-right.png";
+                    itemTerselesaikan.style.display="none"
+                }
+            }) 
+            const ByTanggal = document.getElementById("by-tanggal")
+            const moreByTanggal = document.getElementById("more-bytanggal")
+            ByTanggal.addEventListener("click", function(){
+                
+                if(moreByTanggal.style.display==="none"){
+                    moreByTanggal.style.display="flex"
+                    ByTanggal.style.borderColor="gray"
+                    ByTanggal.style.color="gray"
+                    ByTanggal.querySelector('img').src ="/images/arrow-up.png"
+                }else{
+                    moreByTanggal.style.display="none"
+                    ByTanggal.style.borderColor="#FF5F26"
+                    ByTanggal.style.color="#FF5F26"
+                    ByTanggal.querySelector('img').src ="/images/arrow-down2.png"
+                }
+            })
+            
+
+        </script>
+    </body>
+    </html>   
